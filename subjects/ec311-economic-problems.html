@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ปัญหาพื้นฐานและวิธีการศึกษาเศรษฐศาสตร์ — EC311</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Sarabun:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* สไตล์เฉพาะหน้านี้: เนื้อหาบรรยาย + แผนภาพ circular flow */
+  .lesson-text{color:var(--chalk-dim); font-size:0.95rem; line-height:1.8; margin:0 0 14px;}
+  .lesson-text strong{color:var(--chalk); font-weight:600;}
+  .lesson-list{margin:0 0 14px; padding-left:20px; color:var(--chalk-dim); font-size:0.95rem; line-height:1.85;}
+  .lesson-list li{margin-bottom:4px;}
+  .lesson-list em{color:var(--accent); font-style:normal; font-weight:600;}
+
+  .mini-table{width:100%; border-collapse:collapse; margin:10px 0 18px; font-family:'Sarabun',sans-serif; font-size:0.86rem;}
+  .mini-table th{background:rgba(255,255,255,0.04); color:var(--accent); font-family:'Mali',sans-serif; font-weight:700; font-size:0.8rem; text-align:left; padding:8px 10px; border-bottom:1px solid var(--chalk-faint);}
+  .mini-table td{padding:8px 10px; border-bottom:1px solid var(--chalk-faint); color:var(--chalk-dim);}
+  .mini-table td.mono{font-family:'JetBrains Mono',monospace; color:var(--chalk);}
+
+  .facts{margin-top:14px; display:grid; grid-template-columns:1fr; gap:12px;}
+  @media(min-width:640px){.facts{grid-template-columns:1fr 1fr;}}
+  .fact-card{background:rgba(255,255,255,0.02); border:1px solid var(--chalk-faint); border-radius:3px; padding:14px 16px;}
+  .fact-card .label{font-family:'Mali',sans-serif; font-size:0.82rem; color:var(--accent); margin-bottom:6px; font-weight:600;}
+  .fact-card .formula{font-family:'JetBrains Mono',monospace; font-size:0.86rem; color:var(--chalk); line-height:1.6;}
+
+  .graph-wrap{background:var(--board-panel-2); border-radius:3px; padding:12px; border:1px solid rgba(255,255,255,0.05); margin-top:12px;}
+  svg{width:100%; height:auto; display:block;}
+  .flow-box{fill:rgba(255,255,255,0.03); stroke:var(--chalk-faint); stroke-width:1.3;}
+  .flow-box.gov{fill:rgba(231,206,134,0.06); stroke:color-mix(in srgb, var(--accent) 45%, transparent);}
+  .flow-label{font-family:'Mali',sans-serif; font-size:12px; font-weight:700; fill:var(--chalk); text-anchor:middle;}
+  .flow-arrow{stroke:var(--accent); stroke-width:1.8; fill:none;}
+  .flow-arrow.dashed{stroke:var(--chalk-dim); stroke-width:1.3; stroke-dasharray:3 4;}
+  .flow-caption{font-family:'JetBrains Mono',monospace; font-size:10.5px; fill:var(--chalk-dim);}
+</style>
+</head>
+<body class="accent-blue">
+
+<div class="topbar">
+  <a class="home-link" href="../index.html">← หน้าแรก (รวมทุกวิชา)</a>
+  <div class="subject-tabs">
+    <a class="tab active" href="ec311.html">EC311 · จุลภาค</a>
+    <a class="tab" href="ec312.html">EC312 · มหภาค</a>
+    <a class="tab" href="ec302.html">EC302 · ประวัติศาสตร์</a>
+    <a class="tab" href="ec401.html">EC401 · การเมือง</a>
+    <a class="tab" href="ec404.html">EC404 · แนวคิด</a>
+    <a class="tab" href="ge228.html">GE228 · ภูมิศาสตร์เมือง</a>
+  </div>
+</div>
+
+<main>
+  <div class="panel">
+    <div class="breadcrumb">
+      <a href="../index.html">หน้าแรก</a><span class="sep">/</span>
+      <a href="ec311.html">EC311</a><span class="sep">/</span>ปัญหาพื้นฐาน
+    </div>
+    <h1>ปัญหาพื้นฐานและวิธีการศึกษาเศรษฐศาสตร์</h1>
+    <p class="subtitle">ปัญหา What-How-For Whom · ระบบเศรษฐกิจ · แนวทางการศึกษาเศรษฐศาสตร์ · เครื่องมือวิเคราะห์</p>
+
+    <div class="section-label">1.5 ปัญหาพื้นฐานทางเศรษฐกิจ</div>
+    <p class="lesson-text">เกิดจากความไม่สมดุลระหว่างความต้องการที่ไม่จำกัดกับทรัพยากรที่มีจำกัด ทุกสังคมจึงต้องเผชิญปัญหาพื้นฐาน 3 ประการเสมอ</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">What — จะผลิตอะไร</div>
+        <div class="formula">ตัดสินใจเลือกชนิดและปริมาณสินค้า/บริการที่จะผลิต</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">How — จะผลิตอย่างไร</div>
+        <div class="formula">เลือกวิธี/เทคนิคการผลิตที่มีประสิทธิภาพและต้นทุนต่ำสุด</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">For Whom — จะผลิตเพื่อใคร</div>
+        <div class="formula">ตัดสินใจแบ่งสรรผลผลิตไปยังใครบ้างในสังคม</div>
+      </div>
+    </div>
+
+    <div class="section-label">1.6 ระบบเศรษฐกิจกับการแก้ปัญหาพื้นฐาน</div>
+    <p class="lesson-text"><strong>1.6.1</strong> ระบบเศรษฐกิจแบ่งได้ 3 แบบ จำแนกด้วย 3 หลักเกณฑ์: กรรมสิทธิ์ในทรัพย์สิน เสรีภาพของเอกชน และเครื่องมือที่ใช้แก้ปัญหาพื้นฐาน</p>
+    <table class="mini-table">
+      <tr><th>ระบบเศรษฐกิจแบบตลาดเสรี</th><th>ระบบเศรษฐกิจแบบบังคับ</th></tr>
+      <tr><td>กรรมสิทธิ์ทรัพย์สินส่วนใหญ่เป็นของเอกชน</td><td>กรรมสิทธิ์ทรัพย์สินส่วนใหญ่เป็นของรัฐ/ส่วนรวม</td></tr>
+      <tr><td>เอกชนมีเสรีภาพดำเนินกิจกรรมเต็มที่ (ภายใต้กฎหมาย)</td><td>เอกชนขาดเสรีภาพ ถูกควบคุมโดยรัฐอย่างเข้มงวด</td></tr>
+      <tr><td>ใช้กลไกราคาแก้ปัญหาพื้นฐานทางเศรษฐกิจ</td><td>ใช้อำนาจการตัดสินใจจากส่วนกลางแก้ปัญหา</td></tr>
+    </table>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">ระบบเศรษฐกิจแบบผสม (Mixed Economy)</div>
+        <div class="formula">ผสมผสานตลาดเสรีกับบังคับ — ระบบที่ประเทศส่วนใหญ่รวมถึงไทยใช้อยู่</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">3 หลักเกณฑ์จำแนกระบบเศรษฐกิจ</div>
+        <div class="formula">กรรมสิทธิ์ทรัพย์สิน · เสรีภาพเอกชน · เครื่องมือแก้ปัญหาพื้นฐาน</div>
+      </div>
+    </div>
+
+    <p class="lesson-text" style="margin-top:20px;"><strong>1.6.2</strong> ภาพรวมของระบบเศรษฐกิจ (Circular Flow) — หน่วยครัวเรือนเป็นเจ้าของปัจจัยการผลิต ขายให้หน่วยธุรกิจผ่านตลาดปัจจัยการผลิต หน่วยธุรกิจนำไปผลิตสินค้า/บริการแล้วขายกลับให้ครัวเรือนผ่านตลาดผลผลิต ส่วนรัฐบาลเข้าไปเกี่ยวข้องกับทั้งสองตลาด</p>
+
+    <div class="graph-wrap">
+      <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="flowArrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+            <path d="M0,0 L7,3.5 L0,7 Z" fill="var(--accent)"/>
+          </marker>
+        </defs>
+
+        <rect class="flow-box" x="160" y="20" width="200" height="55" rx="3"/>
+        <text class="flow-label" x="260" y="53">ตลาดปัจจัยการผลิต</text>
+
+        <rect class="flow-box" x="160" y="325" width="200" height="55" rx="3"/>
+        <text class="flow-label" x="260" y="358">ตลาดผลผลิต</text>
+
+        <rect class="flow-box" x="15" y="165" width="130" height="55" rx="3"/>
+        <text class="flow-label" x="80" y="198">ธุรกิจ</text>
+
+        <rect class="flow-box" x="375" y="165" width="130" height="55" rx="3"/>
+        <text class="flow-label" x="440" y="198">ครัวเรือน</text>
+
+        <rect class="flow-box gov" x="210" y="165" width="100" height="55" rx="3"/>
+        <text class="flow-label" x="260" y="198">รัฐบาล</text>
+
+        <path class="flow-arrow" d="M420,165 L340,75" marker-end="url(#flowArrow)"/>
+        <text class="flow-caption" x="345" y="108">ปัจจัยการผลิต</text>
+
+        <path class="flow-arrow" d="M180,75 L100,165" marker-end="url(#flowArrow)"/>
+        <text class="flow-caption" x="95" y="108">ปัจจัยการผลิต</text>
+
+        <path class="flow-arrow" d="M100,220 L180,325" marker-end="url(#flowArrow)"/>
+        <text class="flow-caption" x="90" y="290">สินค้า/บริการ</text>
+
+        <path class="flow-arrow" d="M340,325 L420,220" marker-end="url(#flowArrow)"/>
+        <text class="flow-caption" x="335" y="300">สินค้า/บริการ</text>
+
+        <line class="flow-arrow dashed" x1="260" y1="165" x2="260" y2="75"/>
+        <line class="flow-arrow dashed" x1="260" y1="220" x2="260" y2="325"/>
+      </svg>
+    </div>
+    <p class="lesson-text" style="margin-top:10px; font-size:0.86rem;">เส้นทึบ = กระแสสินค้า/ปัจจัยการผลิต (เงินไหลสวนทางเสมอ เป็นค่าตอบแทนปัจจัยและรายจ่ายซื้อสินค้า) · เส้นประ = รัฐบาลเก็บภาษี/ใช้จ่ายในทั้งสองตลาด</p>
+
+    <p class="lesson-text" style="margin-top:18px;"><strong>1.6.3</strong> ในระบบตลาดเสรี กลไกราคา (price mechanism) เป็นเครื่องมือหลักที่ช่วยแก้ปัญหาพื้นฐานทั้ง 3 ข้อ</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">What → ราคาสินค้า</div>
+        <div class="formula">ราคาสูงจูงใจผู้ผลิตให้ผลิตสินค้านั้นมากขึ้น</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">How → ราคาปัจจัยการผลิต</div>
+        <div class="formula">ราคาปัจจัยที่ต่ำกว่าจูงใจให้เลือกวิธีผลิตที่ประหยัดต้นทุนที่สุด</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">For Whom → อำนาจซื้อ</div>
+        <div class="formula">ผู้ที่ยินดีจ่ายตามราคาตลาดคือผู้ที่ได้รับสินค้าไป</div>
+      </div>
+    </div>
+
+    <div class="section-label">1.7 การศึกษาวิชาเศรษฐศาสตร์</div>
+    <p class="lesson-text"><strong>1.7.1</strong> วิชาเศรษฐศาสตร์แบ่งเป็น 2 แขนงใหญ่ตามระดับที่ศึกษา</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">เศรษฐศาสตร์จุลภาค (Microeconomics)</div>
+        <div class="formula">ศึกษาพฤติกรรมหน่วยเศรษฐกิจย่อย เช่น ผู้บริโภค ผู้ผลิตแต่ละราย ตลาดสินค้าเฉพาะชนิด</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">เศรษฐศาสตร์มหภาค (Macroeconomics)</div>
+        <div class="formula">ศึกษาปรากฏการณ์ระดับรวม เช่น เงินเฟ้อ การจ้างงาน รายได้ประชาชาติ</div>
+      </div>
+    </div>
+
+    <p class="lesson-text" style="margin-top:18px;"><strong>1.7.2</strong> ข้อเสนอทางเศรษฐศาสตร์แบ่งเป็นเชิงสัจจะและเชิงบรรทัดฐาน</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">เชิงสัจจะ / เชิงปฏิฐาน (Positive)</div>
+        <div class="formula">อธิบาย "สิ่งที่เป็นจริง" ทดสอบได้ด้วยข้อเท็จจริง</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">เชิงบรรทัดฐาน (Normative)</div>
+        <div class="formula">เสนอ "สิ่งที่ควรจะเป็น" อิงคุณค่า/ความเห็น ทดสอบไม่ได้</div>
+      </div>
+    </div>
+    <ul class="lesson-list">
+      <li>ถ้าราคาสินค้าลดลง ปริมาณความต้องการซื้อจะเพิ่มขึ้น — <em>เชิงสัจจะ (ทดสอบได้)</em></li>
+      <li>รัฐบาลควรเน้นนโยบายกระจายรายได้มากกว่าความเจริญเติบโตทางเศรษฐกิจ — <em>เชิงบรรทัดฐาน (เป็นความเห็น)</em></li>
+    </ul>
+
+    <p class="lesson-text"><strong>1.7.3</strong> องค์ประกอบของทฤษฎีเศรษฐศาสตร์ และประเภทของตัวแปรที่ใช้ในทฤษฎี</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">องค์ประกอบของทฤษฎี</div>
+        <div class="formula">คำนิยาม (Definition) → ข้อสมมติ (Assumption) → ข้อสันนิษฐาน/คำทำนาย (Hypothesis)</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">ประเภทตัวแปร</div>
+        <div class="formula">อิสระ (เหตุ) / ตาม (ผล) · ถูกชักนำ = ตัวแปรภายใน (endogenous) · อัตโนมัติ = ตัวแปรภายนอก (exogenous)</div>
+      </div>
+    </div>
+
+    <p class="lesson-text" style="margin-top:18px;"><strong>1.7.4</strong> วิธีการสร้างทฤษฎีเศรษฐศาสตร์ตามแนวทางประสบการณ์นิยม มี 2 วิธีหลัก</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">นิรนัยวิธี (Deduction)</div>
+        <div class="formula">ตั้งข้อสันนิษฐานจากหลักเหตุผลก่อน แล้วค่อยทดสอบด้วยข้อมูลจริง</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">อุปนัยวิธี (Induction)</div>
+        <div class="formula">รวบรวมข้อเท็จจริง/ข้อมูลก่อน แล้วสรุปเป็นความสัมพันธ์ทีหลัง</div>
+      </div>
+    </div>
+
+    <div class="section-label">1.8 เครื่องมือสำหรับการศึกษาวิชาเศรษฐศาสตร์</div>
+    <p class="lesson-text">ความสัมพันธ์ระหว่างตัวแปรชุดเดียวกัน สามารถนำเสนอได้ 4 รูปแบบ ซึ่งสอดคล้องกันทั้งหมด</p>
+    <div class="facts">
+      <div class="fact-card">
+        <div class="label">ข้อความ/คำพูด (Verbal)</div>
+        <div class="formula">อธิบายความสัมพันธ์ด้วยประโยค เข้าใจง่ายแต่ยืดเยื้อ</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">คณิตศาสตร์ (Mathematical)</div>
+        <div class="formula">Qd = 10 − 2P (สมการแสดงความสัมพันธ์)</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">ตาราง (Schedule)</div>
+        <div class="formula">จับคู่ค่าตัวแปรอิสระกับตัวแปรตามไว้ในตาราง</div>
+      </div>
+      <div class="fact-card">
+        <div class="label">กราฟ (Graphical)</div>
+        <div class="formula">เส้นกราฟแสดงความสัมพันธ์ ทำความเข้าใจได้รวดเร็ว</div>
+      </div>
+    </div>
+    <table class="mini-table">
+      <tr><th>ราคา (P)</th><th>ปริมาณซื้อ (Q)</th></tr>
+      <tr><td class="mono">1</td><td class="mono">8</td></tr>
+      <tr><td class="mono">2</td><td class="mono">6</td></tr>
+      <tr><td class="mono">3</td><td class="mono">4</td></tr>
+      <tr><td class="mono">4</td><td class="mono">2</td></tr>
+      <tr><td class="mono">5</td><td class="mono">0</td></tr>
+    </table>
+  </div>
+</main>
+
+<footer>EC311 · ปัญหาพื้นฐานและวิธีการศึกษาเศรษฐศาสตร์</footer>
+
+</body>
+</html>
